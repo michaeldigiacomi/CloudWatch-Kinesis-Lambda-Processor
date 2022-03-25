@@ -1,6 +1,6 @@
 # CW-Kinesis-Processor
 
-This Lambda Function Parses Lex CloudWatch Logs to output just the results of the conversation with Lex. This function only contains basic error checking and logging. This code is shared as a samople and not targetted for production without adding you own standards.
+This Lambda Function Parses Lex CloudWatch Logs to output just the results of the conversation with Lex to a S3 bucket. This function only contains basic error checking and logging as well as hardcoded aspects.. This code is shared as a sample and not targetted for production without adding you own standards.
 
 ### Sample CloudWatch Log from Lex
 ```

@@ -16,7 +16,7 @@ var output = {};
       var s3 = new AWS.S3();
 
       var params = {
-          Bucket : "gic-lexlogs",
+          Bucket : "<bucketname>",
           Key : log.sessionId + ".json",
           Body : JSON.stringify(log.interpretations)
       }
