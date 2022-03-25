@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  CW-Kinesis-Processor
+
+Resources:
+  S3JsonLoggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/kinesisHandler.kinesisHandler
+      Runtime: nodejs14.x
+      Architectures:
+        - x86_64
+      MemorySize: 128
+      Timeout: 60
