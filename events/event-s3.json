@@ -1,38 +1,106 @@
 {
-  "Records": [
-    {
-      "eventVersion": "2.0",
-      "eventSource": "aws:s3",
-      "awsRegion": "us-east-1",
-      "eventTime": "1970-01-01T00:00:00.000Z",
-      "eventName": "ObjectCreated:Put",
-      "userIdentity": {
-        "principalId": "EXAMPLE"
+  "timestamp": "2022-03-25T02:06:07.382Z",
+  "messageVersion": "2.0",
+  "requestId": "6181aaac-5ea3-4f86-a283-6b38084577c6",
+  "sessionId": "455980081820937",
+  "inputMode": "Text",
+  "operationName": "RecognizeText",
+  "developerOverride": false,
+  "missedUtterance": false,
+  "bot": {
+      "name": "BookTrip-POC",
+      "version": "DRAFT",
+      "id": "RTH0HOHD3Q",
+      "aliasName": "TestBotAlias",
+      "aliasId": "TSTALIASID",
+      "localeId": "en_US"
+  },
+  "sessionState": {
+      "originatingRequestId": "e9c7c38c-fd55-4264-b70a-64fda8c939f0",
+      "intent": {
+          "name": "MakeAppointment",
+          "state": "ReadyForFulfillment",
+          "confirmationState": "Confirmed",
+          "slots": {
+              "AppointmentType": {
+                  "value": {
+                      "originalValue": "Trip",
+                      "interpretedValue": "Trip",
+                      "resolvedValues": []
+                  },
+                  "shape": "Scalar"
+              },
+              "Time": {
+                  "value": {
+                      "originalValue": "23:00",
+                      "interpretedValue": "23:00",
+                      "resolvedValues": [
+                          "23:00"
+                      ]
+                  },
+                  "shape": "Scalar"
+              },
+              "Date": {
+                  "value": {
+                      "originalValue": "Tomorrow",
+                      "interpretedValue": "2022-03-25",
+                      "resolvedValues": [
+                          "2022-03-25"
+                      ]
+                  },
+                  "shape": "Scalar"
+              }
+          }
       },
-      "requestParameters": {
-        "sourceIPAddress": "127.0.0.1"
-      },
-      "responseElements": {
-        "x-amz-request-id": "EXAMPLE123456789",
-        "x-amz-id-2": "EXAMPLE123/5678abcdefghijklambdaisawesome/mnopqrstuvwxyzABCDEFGH"
-      },
-      "s3": {
-        "s3SchemaVersion": "1.0",
-        "configurationId": "testConfigRule",
-        "bucket": {
-          "name": "example-bucket",
-          "ownerIdentity": {
-            "principalId": "EXAMPLE"
-          },
-          "arn": "arn:aws:s3:::example-bucket"
-        },
-        "object": {
-          "key": "test/key",
-          "size": 1024,
-          "eTag": "0123456789abcdef0123456789abcdef",
-          "sequencer": "0A1B2C3D4E5F678901"
-        }
+      "dialogAction": {
+          "type": "Close"
       }
-    }
-  ]
+  },
+  "interpretations": [
+      {
+          "nluConfidence": "1.00",
+          "intent": {
+              "name": "MakeAppointment",
+              "state": "ReadyForFulfillment",
+              "confirmationState": "Confirmed",
+              "slots": {
+                  "AppointmentType": {
+                      "value": {
+                          "originalValue": "Trip",
+                          "interpretedValue": "Trip",
+                          "resolvedValues": []
+                      },
+                      "shape": "Scalar"
+                  },
+                  "Time": {
+                      "value": {
+                          "originalValue": "23:00",
+                          "interpretedValue": "23:00",
+                          "resolvedValues": [
+                              "23:00"
+                          ]
+                      },
+                      "shape": "Scalar"
+                  },
+                  "Date": {
+                      "value": {
+                          "originalValue": "Tomorrow",
+                          "interpretedValue": "2022-03-25",
+                          "resolvedValues": [
+                              "2022-03-25"
+                          ]
+                      },
+                      "shape": "Scalar"
+                  }
+              }
+          }
+      },
+      {
+          "intent": {
+              "name": "FallbackIntent",
+              "slots": {}
+          }
+      }
+  ],
+  "inputTranscript": "yes"
 }
